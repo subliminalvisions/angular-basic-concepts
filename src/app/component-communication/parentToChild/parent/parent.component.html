@@ -1,13 +1,14 @@
-<p>parent works!</p>
 
+<h3>Parent to Child Communication:</h3>
 
 <div style="text-align: center;"> 
-    <h1> 
+    <h2> 
       parent component - {{parentid}} 
-    </h1> 
+    </h2> 
 </div> 
 
 (Bind ParentId to child component)   
-<app-child [id] = "parentid"></app-child>
+<app-child [idPassedToChild] = "parentid"></app-child>
 
+<hr>
   

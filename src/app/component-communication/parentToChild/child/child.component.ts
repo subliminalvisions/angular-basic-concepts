@@ -9,7 +9,7 @@ export class ChildComponent implements OnInit {
 
   // @input decorator to fetch property from parent 
   @Input() 
-  id: number; 
+  idPassedToChild: number; 
   constructor() { }
 
   ngOnInit(): void {
