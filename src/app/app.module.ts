@@ -10,6 +10,8 @@ import { Parent2Component } from './component-communication/childToParent/parent
 import { Child1Component } from './component-communication/childToParent/child1/child1.component';
 
 import { FormsModule } from '@angular/forms';
+import { ViewChildChildComponent } from './component-communication/parentToChild/view-child-child/view-child-child.component';
+import { ViewChildParentComponent } from './component-communication/parentToChild/view-child-parent/view-child-parent.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     ChildComponent,
     Child2Component,
     Parent2Component,
-    Child1Component
+    Child1Component,
+    ViewChildChildComponent,
+    ViewChildParentComponent
   ],
   imports: [
     BrowserModule,
