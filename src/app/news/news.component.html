@@ -1,0 +1,13 @@
+
+<div>
+    <h3>news pulled from service via api, but app router not working </h3>
+</div>
+<div *ngFor="let article of articles">
+    <h2>{{article.title}}</h2>
+  
+      <p>
+        {{article.description}}
+      </p>
+      <a href="{{article.url}}">Read full article</a>
+  </div>
+  

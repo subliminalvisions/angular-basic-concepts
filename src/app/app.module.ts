@@ -13,6 +13,10 @@ import { FormsModule } from '@angular/forms';
 import { ViewChildChildComponent } from './component-communication/parentToChild/view-child-child/view-child-child.component';
 import { ViewChildParentComponent } from './component-communication/parentToChild/view-child-parent/view-child-parent.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { NewsComponent } from './news/news.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,11 +26,13 @@ import { ViewChildParentComponent } from './component-communication/parentToChil
     Parent2Component,
     Child1Component,
     ViewChildChildComponent,
-    ViewChildParentComponent
+    ViewChildParentComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
