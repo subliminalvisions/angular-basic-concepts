@@ -36,6 +36,7 @@ import { NewsComponent } from './news/news.component';
     AppRoutingModule
   ],
   providers: [],
+  exports: [AppRoutingModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
