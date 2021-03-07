@@ -16,6 +16,7 @@ import { ViewChildParentComponent } from './component-communication/parentToChil
 import { HttpClientModule } from '@angular/common/http';
 import { NewsComponent } from './news/news.component';
 
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { NewsComponent } from './news/news.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    RouterModule,
     AppRoutingModule
+    
   ],
   providers: [],
   exports: [AppRoutingModule, NewsComponent],
