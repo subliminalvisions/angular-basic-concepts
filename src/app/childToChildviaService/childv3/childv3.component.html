@@ -1,3 +1,11 @@
 <h2>Angular - send data via Service</h2>
+<div>
+
+    <input type="text" name="messageString" id="messageString" [(ngModel)]="messageString" class="form-control" placeholder="type message " required #name="ngModel">
+</div>
+<div>
+    {{ messageString }}
+</div>
+
 <button (click)="sendMessage()" class="btn btn-primary">Send Message</button>
 <button (click)="clearMessages()" class="btn btn-secondary">Clear Messages</button>

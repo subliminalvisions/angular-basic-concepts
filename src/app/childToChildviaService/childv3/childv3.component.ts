@@ -9,8 +9,10 @@ import { MessageService } from '../message.service';
 })
 export class Childv3Component implements OnInit {
 
+  messageString: string;
   messages: any[] = [];
   subscription: Subscription;
+
   constructor(private messageService: MessageService) { }
   // constructor(private messageService: MessageService) {
   //     // subscribe to home component messages
@@ -31,7 +33,8 @@ export class Childv3Component implements OnInit {
 
   sendMessage(): void {
       // send message to subscribers via observable subject
-      this.messageService.sendMessage('Message from Home v3 compo to v4!');
+      // this.messageService.sendMessage('Message from Home v3 compo to v4!');
+      this.messageService.sendMessage(this.messageString);
   }
 
   clearMessages(): void {
