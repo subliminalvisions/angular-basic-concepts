@@ -17,6 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { NewsComponent } from './news/news.component';
 
 import { RouterModule } from '@angular/router';
+import { Childv3Component } from './childToChildviaService/childv3/childv3.component';
+import { Childv4Component } from './childToChildviaService/childv4/childv4.component';
+import { Parentv5Component } from './childToChildviaService/parentv5/parentv5.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { RouterModule } from '@angular/router';
     Child1Component,
     ViewChildChildComponent,
     ViewChildParentComponent,
-    NewsComponent
+    NewsComponent,
+    Childv3Component,
+    Childv4Component,
+    Parentv5Component
   ],
   imports: [
     BrowserModule,
