@@ -20,6 +20,8 @@ import { RouterModule } from '@angular/router';
 import { Childv3Component } from './childToChildviaService/childv3/childv3.component';
 import { Childv4Component } from './childToChildviaService/childv4/childv4.component';
 import { Parentv5Component } from './childToChildviaService/parentv5/parentv5.component';
+import { HighlightDirective } from './custom-directives/highlight.directive';
+import { DirectiveExampleComponent } from './custom-directives/directive-example/directive-example.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { Parentv5Component } from './childToChildviaService/parentv5/parentv5.co
     NewsComponent,
     Childv3Component,
     Childv4Component,
-    Parentv5Component
+    Parentv5Component,
+    HighlightDirective,
+    DirectiveExampleComponent
   ],
   imports: [
     BrowserModule,
