@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PipeExamplesComponent implements OnInit {
 
   exampleArticleTitle: string;
+  exampleJson: {};
 
   constructor() { }
 
@@ -18,6 +19,7 @@ export class PipeExamplesComponent implements OnInit {
 
   setVars() {
     this.exampleArticleTitle = 'Exclusive: Behind The recent Growth Of Spirit airlines';
+    this.exampleJson = {fork: 'steel', spoon: 'gold', nested: {Qwasar: 3, numbers: [1, 2, 3, 4, 5]}};
   }
 
 }
