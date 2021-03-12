@@ -22,6 +22,7 @@ import { Childv4Component } from './childToChildviaService/childv4/childv4.compo
 import { Parentv5Component } from './childToChildviaService/parentv5/parentv5.component';
 import { HighlightDirective } from './custom-directives/highlight.directive';
 import { DirectiveExampleComponent } from './custom-directives/directive-example/directive-example.component';
+import { PipeExamplesComponent } from './pipes/pipe-examples/pipe-examples.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { DirectiveExampleComponent } from './custom-directives/directive-example
     Childv4Component,
     Parentv5Component,
     HighlightDirective,
-    DirectiveExampleComponent
+    DirectiveExampleComponent,
+    PipeExamplesComponent
   ],
   imports: [
     BrowserModule,
