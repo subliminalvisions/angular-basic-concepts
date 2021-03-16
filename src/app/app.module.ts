@@ -23,6 +23,7 @@ import { Parentv5Component } from './childToChildviaService/parentv5/parentv5.co
 import { HighlightDirective } from './custom-directives/highlight.directive';
 import { DirectiveExampleComponent } from './custom-directives/directive-example/directive-example.component';
 import { PipeExamplesComponent } from './pipes/pipe-examples/pipe-examples.component';
+import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { PipeExamplesComponent } from './pipes/pipe-examples/pipe-examples.compo
     Parentv5Component,
     HighlightDirective,
     DirectiveExampleComponent,
-    PipeExamplesComponent
+    PipeExamplesComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,
