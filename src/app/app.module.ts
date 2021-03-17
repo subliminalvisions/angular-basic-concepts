@@ -9,7 +9,7 @@ import { Child2Component } from './component-communication/childToParent/child2/
 import { Parent2Component } from './component-communication/childToParent/parent2/parent2.component';
 import { Child1Component } from './component-communication/childToParent/child1/child1.component';
 
-import { FormsModule } from '@angular/forms';
+// import { FormsModule } from '@angular/forms';
 import { ViewChildChildComponent } from './component-communication/parentToChild/view-child-child/view-child-child.component';
 import { ViewChildParentComponent } from './component-communication/parentToChild/view-child-parent/view-child-parent.component';
 
@@ -24,6 +24,8 @@ import { HighlightDirective } from './custom-directives/highlight.directive';
 import { DirectiveExampleComponent } from './custom-directives/directive-example/directive-example.component';
 import { PipeExamplesComponent } from './pipes/pipe-examples/pipe-examples.component';
 import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,13 +44,15 @@ import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.co
     HighlightDirective,
     DirectiveExampleComponent,
     PipeExamplesComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     RouterModule,
+    ReactiveFormsModule,
     AppRoutingModule
     
   ],

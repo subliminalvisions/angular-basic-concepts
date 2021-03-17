@@ -1,43 +1,16 @@
-
-<h3>Parent / Child Communication (comms)</h3>
-<ul>
-    <li><a routerLink="/parent-down" routerLinkActive="active" type="button" class="btn btn-secondary">Parent to Child comms (basic via input)</a></li>
-    <li><a routerLink="/child-up" routerLinkActive="active" type="button" class="btn btn-secondary">Child to Parent comms via output</a></li>
-    <li><a routerLink="/parent-viewchild" routerLinkActive="active" type="button" class="btn btn-secondary">Child to Parent via ViewChild</a></li>
-    <li><a routerLink="/child-to-child" routerLinkActive="active" type="button" class="btn btn-secondary">Child to Child via Service </a></li>
-</ul>
-
-<h3>Parent / Child Comms</h3>
-<ul>
-    <li><a routerLink="/news" routerLinkActive="active" type="button" class="btn btn-secondary">getting data from a Service (aka news)</a></li>
-    <li><a routerLink="/data-to-service" routerLinkActive="active" type="button" class="btn btn-secondary disabled">Sending data to app.component via Service (tbd) </a></li>
-</ul>
-
-<h3>Directives </h3>
-<ul>
-    <li><a routerLink="/directive-example" routerLinkActive="active" type="button" class="btn btn-secondary">Custom Directive to change DOM elements/ attributes/ appearence  </a></li>
-</ul>
-
-<h3>Pipes </h3>
-<ul>
-    <li><a routerLink="/pipe-examples1" routerLinkActive="active" type="button" class="btn btn-secondary">Built in "Pipes" to alter properties  </a></li>
-</ul>
-
-<p><i>
-    (//Note to self: Change this app component later to be more clean //) <br/>
-    (// also fix this crazy nav//)
-</i></p>
-
-<hr>
-
-<h3>Forms </h3>
-<ul>
-    <li><a routerLink="/forms" routerLinkActive="active" type="button" class="btn btn-secondary">Reactive Forms  </a></li>
-</ul>
-
-<p><i>    (//Note to self: Change this app component later to be more clean //) <br/>
-    (// also fix this crazy nav//)
-</i></p>
+<!-- 
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+   -->
+<app-main-nav></app-main-nav>
 
 <hr>
 <router-outlet></router-outlet>

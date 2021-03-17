@@ -1,0 +1,101 @@
+<div class="container">
+	<!-- <div class="row">
+	</div> -->
+	
+	<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <a class="navbar-brand" href="#">NG Basic Concepts </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        
+        <button type="button" class="btn btn-link">Link</button>
+        
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto topnav">
+
+                    <li><a routerLink="/parent-down" routerLinkActive="active" type="button" class="btn btn-secondary">Test button styles - no workie</a></li>
+
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Testing Nav <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">nav link 1 </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">nav link 2 </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Clearence Event</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Resources
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">item 1</a>
+                        <a class="dropdown-item" href="#">item 2 </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">item 3 </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+
+            </ul>
+        </div>            
+
+    </nav>
+</div>
+
+
+<h3>Parent / Child Communication (comms)</h3>
+<ul>
+    <li><a routerLink="/parent-down" routerLinkActive="active" type="button" class="btn btn-secondary">Parent to Child comms (basic via input)</a></li>
+    <li><a routerLink="/child-up" routerLinkActive="active" type="button" class="btn btn-secondary">Child to Parent comms via output</a></li>
+    <li><a routerLink="/parent-viewchild" routerLinkActive="active" type="button" class="btn btn-secondary">Child to Parent via ViewChild</a></li>
+    <li><a routerLink="/child-to-child" routerLinkActive="active" type="button" class="btn btn-secondary">Child to Child via Service </a></li>
+</ul>
+
+<h3>Parent / Child Comms</h3>
+<ul>
+    <li><a routerLink="/news" routerLinkActive="active" type="button" class="btn btn-secondary">getting data from a Service (aka news)</a></li>
+    <li><a routerLink="/data-to-service" routerLinkActive="active" type="button" class="btn btn-secondary disabled">Sending data to app.component via Service (tbd) </a></li>
+</ul>
+
+<h3>Directives </h3>
+<ul>
+    <li><a routerLink="/directive-example" routerLinkActive="active" type="button" class="btn btn-secondary">Custom Directive to change DOM elements/ attributes/ appearence  </a></li>
+</ul>
+
+<h3>Pipes </h3>
+<ul>
+    <li><a routerLink="/pipe-examples1" routerLinkActive="active" type="button" class="btn btn-secondary">Built in "Pipes" to alter properties  </a></li>
+</ul>
+
+<p><i>
+    (//Note to self: Change this app component later to be more clean //) <br/>
+    (// also fix this crazy nav//)
+</i></p>
+
+<hr>
+
+<h3>Forms </h3>
+<ul>
+    <li><a routerLink="/forms" routerLinkActive="active" type="button" class="btn btn-secondary">Reactive Forms  </a></li>
+</ul>
+
+<p><i>    (//Note to self: Change this app component later to be more clean //) <br/>
+    (// also fix this crazy nav//)
+</i></p>
