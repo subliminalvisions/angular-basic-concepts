@@ -1,6 +1,5 @@
 <form [formGroup]="bioSection" (ngSubmit)="callingFunction()">
-  <h3>Bio Details
-</h3>
+  <h3>Bio Details - Validators Broken - still a work in progress </h3>
 
 <label>
   First Name:
@@ -10,6 +9,19 @@
   Last Name:
   <input type="text" formControlName="lastName">
 </label> <br>
+
+<label>
+  Email:
+  <input type="text" formControlName="email">
+</label> <br>
+
+<div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
+  <div *ngIf="f.email.errors.required">Username is required.</div>
+  <div *ngIf="f.email.errors.minlength">Username should be 3 character.</div>
+  <div *ngIf="f.email.errors.cannotContainSpace">Username can not contain space.</div>
+</div>
+
+
 <label>
   Age:
   <input type="text" formControlName="age">

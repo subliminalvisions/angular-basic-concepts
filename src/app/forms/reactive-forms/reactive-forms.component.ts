@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { FormBuilder } from  '@angular/forms';
+import { FormBuilder, Validators } from  '@angular/forms';
 // import { FormControl, FormGroup } from '@angular/forms';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { WhiteSpaceValidator } from './whitespace.validator';
+// whitespace.validator.ts
 
 @Component({
   selector: 'app-reactive-forms',
@@ -32,6 +34,7 @@ export class ReactiveFormsComponent implements OnInit {
   bioSection = this.fb.group({
     firstName: [''],
     lastName: [''],
+    email: new FormControl('', [Validators.required, Validators.minLength(3), WhiteSpaceValidator.cannotContainSpace]),
     age: [''],
     stackDetails: this.fb.group({
       stack: [''],
@@ -43,11 +46,24 @@ export class ReactiveFormsComponent implements OnInit {
     })
   });
 
+  // form = this.bioSection;
+
+  form = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.minLength(3), WhiteSpaceValidator.cannotContainSpace]),
+    firstName: new FormControl('', [Validators.required, Validators.minLength(3), WhiteSpaceValidator.cannotContainSpace]),
+    lastName: new FormControl('', [Validators.required, Validators.minLength(3), WhiteSpaceValidator.cannotContainSpace]),
+    age: new FormControl('')
+  });
+   
+
+
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
   }
-
+  get f(){
+    return this.form.controls;
+  }
   callingFunction() {
     console.log(this.bioSection.value);
    }
