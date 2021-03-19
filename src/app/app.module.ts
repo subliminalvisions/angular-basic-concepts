@@ -23,8 +23,9 @@ import { Parentv5Component } from './childToChildviaService/parentv5/parentv5.co
 import { HighlightDirective } from './custom-directives/highlight.directive';
 import { DirectiveExampleComponent } from './custom-directives/directive-example/directive-example.component';
 import { PipeExamplesComponent } from './pipes/pipe-examples/pipe-examples.component';
-import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
+
+import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({

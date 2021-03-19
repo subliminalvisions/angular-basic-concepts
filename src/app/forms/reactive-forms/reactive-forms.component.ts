@@ -4,6 +4,7 @@ import { FormBuilder, Validators } from  '@angular/forms';
 // import { FormControl, FormGroup } from '@angular/forms';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { WhiteSpaceValidator } from './whitespace.validator';
+// import { EmailValidator } from './email.validator';
 // whitespace.validator.ts
 
 @Component({
@@ -31,10 +32,24 @@ export class ReactiveFormsComponent implements OnInit {
   //       city: new FormControl('')
   //   })
   // });
+
+  // emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  emailRegex = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
+  // !(control.value.Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"))
+
   bioSection = this.fb.group({
     firstName: [''],
     lastName: [''],
-    email: new FormControl('', [Validators.required, Validators.minLength(3), WhiteSpaceValidator.cannotContainSpace]),
+    email: new FormControl('', [
+      Validators.required, 
+      Validators.minLength(3), 
+      Validators.minLength(3), 
+      WhiteSpaceValidator.cannotContainSpace,
+      Validators.pattern(this.emailRegex),
+      // EmailValidator.EmailIsValid,
+      // pattern to match email
+      // Validators.pattern('^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.{8,})')
+    ]),
     age: [''],
     stackDetails: this.fb.group({
       stack: [''],
