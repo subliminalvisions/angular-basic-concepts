@@ -15,10 +15,10 @@
   <input type="text" formControlName="email">
 </label> <br>
 
-<div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
-  <div *ngIf="f.email.errors.required">Username is required.</div>
-  <div *ngIf="f.email.errors.minlength">Username should be 3 character.</div>
-  <div *ngIf="f.email.errors.cannotContainSpace">Username can not contain space.</div>
+<div *ngIf="f.email.touched && f.email.errors" class="alert alert-danger">
+  <div *ngIf="f.email.errors.required">email is required.</div>
+  <div *ngIf="f.email.errors.minlength">email should be 3 character.</div>
+  <div *ngIf="f.email.errors.cannotContainSpace">em can not contain space.</div>
 </div>
 
 

@@ -1,8 +1,5 @@
 import { AbstractControl, ValidationErrors } from '@angular/forms';
-import { FormControl, FormGroup } from '@angular/forms';
-import { FormBuilder, Validators } from  '@angular/forms';
-// import { FormControl, FormGroup } from '@angular/forms';
-import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+  
 // testing 
 
 export class EmailValidator {
@@ -19,7 +16,9 @@ export class EmailValidator {
         // || 
         // !control.value.endsWith(control.value.emailDomain)
         // || 
+        
         !(control.value.Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"))
+
         ) {
             return { EmailIsValid: true };
           }

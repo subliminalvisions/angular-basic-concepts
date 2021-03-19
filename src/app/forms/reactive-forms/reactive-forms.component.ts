@@ -38,6 +38,7 @@ export class ReactiveFormsComponent implements OnInit {
   // !(control.value.Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"))
 
   bioSection = this.fb.group({
+  // form = this.fb.group({
     firstName: [''],
     lastName: [''],
     email: new FormControl('', [
@@ -63,12 +64,12 @@ export class ReactiveFormsComponent implements OnInit {
 
   // form = this.bioSection;
 
-  form = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.minLength(3), WhiteSpaceValidator.cannotContainSpace]),
-    firstName: new FormControl('', [Validators.required, Validators.minLength(3), WhiteSpaceValidator.cannotContainSpace]),
-    lastName: new FormControl('', [Validators.required, Validators.minLength(3), WhiteSpaceValidator.cannotContainSpace]),
-    age: new FormControl('')
-  });
+  // form = new FormGroup({
+  //   email: new FormControl('', [Validators.required, Validators.minLength(3), WhiteSpaceValidator.cannotContainSpace]),
+  //   firstName: new FormControl('', [Validators.required, Validators.minLength(3), WhiteSpaceValidator.cannotContainSpace]),
+  //   lastName: new FormControl('', [Validators.required, Validators.minLength(3), WhiteSpaceValidator.cannotContainSpace]),
+  //   age: new FormControl('')
+  // });
    
 
 
@@ -77,7 +78,7 @@ export class ReactiveFormsComponent implements OnInit {
   ngOnInit(): void {
   }
   get f(){
-    return this.form.controls;
+    return this.bioSection.controls;
   }
   callingFunction() {
     console.log(this.bioSection.value);
