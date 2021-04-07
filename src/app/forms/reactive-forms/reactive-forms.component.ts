@@ -13,31 +13,14 @@ import { WhiteSpaceValidator } from './whitespace.validator';
   styleUrls: ['./reactive-forms.component.less']
 })
 export class ReactiveFormsComponent implements OnInit {
-  // bioSection = new FormGroup({
-  //   firstName: new FormControl(''),
-  //   lastName: new FormControl(''),
-  //   age: new FormControl('')
-  // });
-
-  // bioSection = new FormGroup({
-  //   firstName: new FormControl(''),
-  //   lastName: new FormControl(''),
-  //   age: new FormControl(''),
-  //   stackDetails: new FormGroup({
-  //     stack: new FormControl(''),
-  //     experience: new FormControl('')
-  //   }),
-  //   address: new FormGroup({
-  //       country: new FormControl(''),
-  //       city: new FormControl('')
-  //   })
-  // });
 
   // emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  emailRegex = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
-  // !(control.value.Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"))
+  // emailRegex = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
+  emailRegex = "^[0-9a-zA-Z._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$";
+  // emailRegex = "^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,4})$";
 
-  bioSection = this.fb.group({
+  newForm = this.fb.group({
+  // bioSection = this.fb.group({
   // form = this.fb.group({
     firstName: [''],
     lastName: [''],
@@ -70,18 +53,16 @@ export class ReactiveFormsComponent implements OnInit {
   //   lastName: new FormControl('', [Validators.required, Validators.minLength(3), WhiteSpaceValidator.cannotContainSpace]),
   //   age: new FormControl('')
   // });
-   
-
 
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
   }
   get f(){
-    return this.bioSection.controls;
+    return this.newForm.controls;
   }
   callingFunction() {
-    console.log(this.bioSection.value);
+    console.log(this.newForm.value);
    }
 
 
