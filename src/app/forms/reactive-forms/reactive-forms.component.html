@@ -15,12 +15,14 @@
 
 <label>
   Email:
-  <input type="text" formControlName="email">
+  <input type="email" formControlName="email" name="email" ngModel [email]="true">
 </label> <br>
 
 <div *ngIf="f.email.touched && f.email.errors" class="alert alert-danger">
+
+  {{ f.email.errors | json }}
   <div *ngIf="f.email.errors.required">email is required.</div>
-  <!-- <div *ngIf="f.email.errors.minlength">email should be 3 character.</div> -->
+  <div *ngIf="f.email.errors.minlength">email should be 3 character.</div>
   <div *ngIf="f.email.errors.cannotContainSpace">emai can not contain space.</div>
   <div *ngIf="f.email.errors.pattern">pls check that it's a valid email</div>
 </div>

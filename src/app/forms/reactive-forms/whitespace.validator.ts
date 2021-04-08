@@ -5,7 +5,6 @@ export class WhiteSpaceValidator {
         if((control.value as string).indexOf(' ') >= 0){
             return {cannotContainSpace: true}
         }
-  
         return null;
     }
 }
