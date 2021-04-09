@@ -9,7 +9,6 @@ import { Child2Component } from './component-communication/childToParent/child2/
 import { Parent2Component } from './component-communication/childToParent/parent2/parent2.component';
 import { Child1Component } from './component-communication/childToParent/child1/child1.component';
 
-// import { FormsModule } from '@angular/forms';
 import { ViewChildChildComponent } from './component-communication/parentToChild/view-child-child/view-child-child.component';
 import { ViewChildParentComponent } from './component-communication/parentToChild/view-child-parent/view-child-parent.component';
 
@@ -27,6 +26,9 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 
 import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MultiStepFormComponent } from './forms/multi-step-form/multi-step-form.component';
+import { FormStepTitlePipe } from './forms/multi-step-form//form-step-title.pipe';
+import { MultiStepFormHolderComponent } from './forms/multi-step-form/multi-step-form-holder.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DirectiveExampleComponent,
     PipeExamplesComponent,
     ReactiveFormsComponent,
-    MainNavComponent
+    MainNavComponent,
+    MultiStepFormComponent,
+    FormStepTitlePipe,
+    MultiStepFormHolderComponent
   ],
   imports: [
     BrowserModule,

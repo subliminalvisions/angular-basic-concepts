@@ -8,6 +8,7 @@ import { Parentv5Component } from './childToChildviaService/parentv5/parentv5.co
 import { DirectiveExampleComponent } from './custom-directives/directive-example/directive-example.component';
 import { PipeExamplesComponent } from './pipes/pipe-examples/pipe-examples.component';
 import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
+import { MultiStepFormHolderComponent } from './forms/multi-step-form/multi-step-form-holder.component';
 
 const routes: Routes = [
   {path:'news', component: NewsComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'child-to-child', component: Parentv5Component},
   {path: 'directive-example', component: DirectiveExampleComponent},
   {path: 'pipe-examples1', component: PipeExamplesComponent},
-  {path:'forms', component: ReactiveFormsComponent}
+  {path:'forms', component: ReactiveFormsComponent},
+  {path:'multi-step-form', component: MultiStepFormHolderComponent}
   // {path: 'data-to-service', component: dataToServiceParentComponent},
 ];
 @NgModule({
