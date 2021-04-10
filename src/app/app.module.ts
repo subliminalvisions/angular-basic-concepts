@@ -29,6 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MultiStepFormComponent } from './forms/multi-step-form/multi-step-form.component';
 import { FormStepTitlePipe } from './forms/multi-step-form//form-step-title.pipe';
 import { MultiStepFormHolderComponent } from './forms/multi-step-form/multi-step-form-holder.component';
+import { ConditionalFormFieldsComponent } from './forms/conditional-form-fields/conditional-form-fields.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { MultiStepFormHolderComponent } from './forms/multi-step-form/multi-step
     MainNavComponent,
     MultiStepFormComponent,
     FormStepTitlePipe,
-    MultiStepFormHolderComponent
+    MultiStepFormHolderComponent,
+    ConditionalFormFieldsComponent
   ],
   imports: [
     BrowserModule,
