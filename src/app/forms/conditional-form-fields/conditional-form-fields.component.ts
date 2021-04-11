@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup, FormBuilder, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-conditional-form-fields',
@@ -7,64 +7,61 @@ import {FormGroup, FormBuilder, Validators} from '@angular/forms';
   styleUrls: ['./conditional-form-fields.component.less']
 })
 export class ConditionalFormFieldsComponent implements OnInit {
-  form: FormGroup;
-  formSubmitted = false;
+  dynamicForm: FormGroup;
+  submitted = false;
   
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
-    this.buildForm();
-    this.setUserCategoryValidators();
-  }
-
-  buildForm() {
-    this.form = this.formBuilder.group({
-      email: [null, [Validators.required]],
-      username: [null, [Validators.required]],
-      userCategory: ['employee'],
-      institution: [null],
-      company: [null, [Validators.required]],
-      salary: [null, [Validators.required]],
+    this.dynamicForm = this.formBuilder.group({
+      numberOfTickets: ['', Validators.required],
+      tickets: new FormArray([])
     });
   }
 
-  onSubmit(event) {
-    event.preventDefault();
-    this.formSubmitted = true;
+    // convenience getters for easy access to form fields
+    get f() { return this.dynamicForm.controls; }
+    get t() { return this.f.tickets as FormArray; }
 
-    if (this.form.valid) {
-      console.log(this.form.value); // Process your form
+    onChangeTickets(e) {
+        const numberOfTickets = e.target.value || 0;
+        if (this.t.length < numberOfTickets) {
+            for (let i = this.t.length; i < numberOfTickets; i++) {
+                this.t.push(this.formBuilder.group({
+                    name: ['', Validators.required],
+                    email: ['', [Validators.required, Validators.email]]
+                }));
+            }
+        } else {
+            for (let i = this.t.length; i >= numberOfTickets; i--) {
+                this.t.removeAt(i);
+            }
+        }
     }
-  }
 
-  setUserCategoryValidators() {
-    const institutionControl = this.form.get('institution');
-    const companyControl = this.form.get('company');
-    const salaryControl = this.form.get('salary');
+    onSubmit() {
+        this.submitted = true;
 
-    this.form.get('userCategory').valueChanges
-      .subscribe(userCategory => {
-
-        if (userCategory === 'student') {
-          institutionControl.setValidators([Validators.required]);
-          companyControl.setValidators(null);
-          salaryControl.setValidators(null);
+        // stop here if form is invalid
+        if (this.dynamicForm.invalid) {
+            return;
         }
 
-        if (userCategory === 'employee') {
-          institutionControl.setValidators(null);
-          companyControl.setValidators([Validators.required]);
-          salaryControl.setValidators([Validators.required]);
-        }
+        // display form values on success
+        alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.dynamicForm.value, null, 4));
+    }
 
-        institutionControl.updateValueAndValidity();
-        companyControl.updateValueAndValidity();
-        salaryControl.updateValueAndValidity();
-      });
-  }
+    onReset() {
+        // reset whole form back to initial state
+        this.submitted = false;
+        this.dynamicForm.reset();
+        this.t.clear();
+    }
 
-
-
-
+    onClear() {
+        // clear errors and reset ticket fields
+        this.submitted = false;
+        this.t.reset();
+    }
 
 }

@@ -10,6 +10,7 @@ import { PipeExamplesComponent } from './pipes/pipe-examples/pipe-examples.compo
 import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 import { MultiStepFormHolderComponent } from './forms/multi-step-form/multi-step-form-holder.component';
 import { ConditionalFormFieldsComponent } from './forms/conditional-form-fields/conditional-form-fields.component';
+import { ConditionalValidationComponent } from './forms/conditional-validation/conditional-validation.component';
 
 const routes: Routes = [
   {path:'news', component: NewsComponent},
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path: 'pipe-examples1', component: PipeExamplesComponent},
   {path:'forms', component: ReactiveFormsComponent},
   {path:'multi-step-form', component: MultiStepFormHolderComponent},
-  {path:'conditional-form', component: ConditionalFormFieldsComponent}
+  {path:'conditional-form', component: ConditionalFormFieldsComponent},
+  {path:'conditional-validation', component: ConditionalValidationComponent}
   // {path: 'data-to-service', component: dataToServiceParentComponent},
 ];
 @NgModule({
