@@ -15,7 +15,9 @@
               </div>
           </div>
       </div>
-      <div *ngFor="let ticket of t.controls; let i = index" class="list-group list-group-flush">
+      <div *ngFor="let ticket of t.controls; let i = index" 
+      [@inOutAnimation]
+      class="list-group list-group-flush">
           <div class="list-group-item">
               <h5 class="card-title">Ticket {{i + 1}}</h5>
               <div [formGroup]="ticket" class="form-row">
