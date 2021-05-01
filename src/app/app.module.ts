@@ -32,6 +32,10 @@ import { MultiStepFormHolderComponent } from './forms/multi-step-form/multi-step
 import { ConditionalFormFieldsComponent } from './forms/conditional-form-fields/conditional-form-fields.component';
 import { ConditionalValidationComponent } from './forms/conditional-validation/conditional-validation.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductComponent } from './products/product/product.component';
+import { EditProductComponent } from './products/edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +60,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormStepTitlePipe,
     MultiStepFormHolderComponent,
     ConditionalFormFieldsComponent,
-    ConditionalValidationComponent
+    ConditionalValidationComponent,
+    PageNotFoundComponent,
+    ProductsComponent,
+    ProductComponent,
+    EditProductComponent
   ],
   imports: [
     BrowserModule,
@@ -70,6 +78,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   providers: [],
   exports: [AppRoutingModule, NewsComponent],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

@@ -1,15 +1,25 @@
 <div class="container">
 	<!-- <div class="row">
 	</div> -->
-	
+
 	<nav class="navbar navbar-expand-sm  bg-warning">
         <a class="navbar-brand" href="#">NG Basic Concepts </a>
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button> -->
 
-        <!-- <button type="button" class="btn btn-primary">Primary</button> -->
-        <!-- <button type="button" class="btn btn-secondary">Secondary</button> -->
+
+
+        <div class=" navbar-nav ml-auto" id="navbarSupportedContent">
+
+          <div class="btn-group">
+              <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Products & Routes
+              </button>
+
+              <div class="dropdown-menu">
+                  <a routerLink="/products" routerLinkActive="active" type="button" class="dropdown-item">Products</a>
+
+
+              </div>
+          </div><!-- END .btn-group -->
 
         <div class=" navbar-nav ml-auto" id="navbarSupportedContent">
 
@@ -23,11 +33,11 @@
                     <a routerLink="/parent-down" routerLinkActive="active" type="button" class="dropdown-item">Parent to Child input </a>
 
                     <a routerLink="/parent-viewchild" routerLinkActive="active" type="button" class="dropdown-item">Child to Parent  ViewChild</a>
-                
-                    <a routerLink="/child-to-child" routerLinkActive="active" type="button" class="dropdown-item">Child to Child Service </a> 
+
+                    <a routerLink="/child-to-child" routerLinkActive="active" type="button" class="dropdown-item">Child to Child Service </a>
 
                     <a routerLink="/news" routerLinkActive="active" type="button" class="dropdown-item">get data from Service </a>
-                    
+
                 </div>
             </div><!-- END .btn-group -->
 
@@ -38,7 +48,7 @@
 
                 <div class="dropdown-menu">
                     <a routerLink="/directive-example" routerLinkActive="active" type="button" class="dropdown-item">Custom Directive to change DOM elements/ attributes/ appearence  </a>
-  
+
                     <a routerLink="/pipe-examples1" routerLinkActive="active" type="button" class="dropdown-item">Built in "Pipes" to alter properties  </a>
 
                 </div>
@@ -50,7 +60,7 @@
                 </button>
 
                 <div class="dropdown-menu">
-               
+
                     <a routerLink="/forms" routerLinkActive="active" type="button" class="dropdown-item">Reactive Forms  </a>
                     <a routerLink="/multi-step-form" routerLinkActive="active" type="button" class="dropdown-item">Multi Step Form  </a>
                     <a routerLink="/conditional-form" routerLinkActive="active" type="button" class="dropdown-item">Conditional Form  </a>
