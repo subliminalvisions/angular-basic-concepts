@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { DataTest1 } from './products-v1';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
+  // providers: [DataTest1],
 })
 export class ProductService {
   // import product model here

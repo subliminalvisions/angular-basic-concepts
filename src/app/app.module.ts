@@ -74,11 +74,11 @@ import { EditProductComponent } from './products/edit-product/edit-product.compo
     RouterModule,
     ReactiveFormsModule,
     AppRoutingModule
-    
+
   ],
   providers: [],
   exports: [AppRoutingModule, NewsComponent],
   bootstrap: [AppComponent],
-  
+
 })
 export class AppModule { }

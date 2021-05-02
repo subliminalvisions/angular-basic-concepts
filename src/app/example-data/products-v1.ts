@@ -1,3 +1,10 @@
+import { Injectable } from '@angular/core';
+// import { DataTest1 } from './products-v1';
+
+@Injectable({
+  providedIn: 'root',
+  // providers: [DataTest1],
+})
 export class DataTest1 {
 
 public products: {} = [
